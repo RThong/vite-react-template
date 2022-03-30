@@ -1,3 +1,4 @@
+import { Button } from 'antd'
 import type { FC } from 'react'
 import { useState } from 'react'
 
@@ -16,6 +17,7 @@ const App: FC = () => {
           <button type="button" onClick={() => setCount(count => count + 1)}>
             count is: {count}
           </button>
+          <Button type="primary">click</Button>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
