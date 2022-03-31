@@ -10,6 +10,16 @@ const themeVariables = lessToJS(readFileSync(pathResolver('./config/theme.config
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    proxy: {
+      '^/api': {
+        target: 'https://api.github.com/users',
+        secure: false,
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, '')
+      }
+    }
+  },
   plugins: [
     react(),
     vitePluginImp({
