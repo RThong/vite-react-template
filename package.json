@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "start": "npm run dev",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style && npm run lint:prettier",
