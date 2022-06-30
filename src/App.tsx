@@ -6,6 +6,7 @@ import styles from './App.module.less'
 import logo from './logo.svg'
 import Login from './pages/Login'
 import { IS_DEV } from './utils/constant'
+console.log('【IS_DEV】', IS_DEV)
 
 const Test = () => {
   return <div>Test</div>
@@ -16,7 +17,10 @@ const App: FC = () => {
     {
       path: '/',
       element: <Layout />,
-      children: [{ index: true, element: <Login /> }].filter(Boolean) as RouteObject[]
+      children: [
+        { index: true, element: <Login /> },
+        IS_DEV && { path: 'test', element: <Test /> }
+      ].filter(Boolean) as RouteObject[]
     }
   ]
 
