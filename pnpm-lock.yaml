@@ -3,7 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@types/node': ^17.0.23
   '@types/react': ^17.0.33
-  '@types/react-dom': ^17.0.14
+  '@types/react-dom': ^17.0.10
   '@typescript-eslint/eslint-plugin': ^5.17.0
   '@typescript-eslint/parser': ^5.17.0
   '@vitejs/plugin-react': ^1.0.7
@@ -31,6 +31,7 @@ specifiers:
   typescript: ^4.6.3
   vite: ^2.8.0
   vite-plugin-imp: ^2.1.6
+  vite-plugin-react-use-model: ^0.2.0
 
 dependencies:
   antd: 4.19.3_react-dom@17.0.2+react@17.0.2
@@ -65,6 +66,7 @@ devDependencies:
   typescript: 4.6.3
   vite: 2.8.6_less@4.1.2
   vite-plugin-imp: 2.1.6_vite@2.8.6
+  vite-plugin-react-use-model: 0.2.0_react@17.0.2
 
 packages:
 
@@ -1905,7 +1907,7 @@ packages:
     dev: true
 
   /image-size/0.5.5:
-    resolution: {integrity: sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=}
+    resolution: {integrity: sha512-6TDAlDPZxUFCv+fuOkIoXT/V/f3Qbq8e37p+YOiYrUv3v9cc3/6x78VdfPgFVaB9dZYeLUfKgHRebpkm/oP2VQ==}
     engines: {node: '>=0.10.0'}
     hasBin: true
     requiresBuild: true
@@ -2344,6 +2346,12 @@ packages:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
     dev: true
 
+  /mkdirp/1.0.4:
+    resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
+    engines: {node: '>=10'}
+    hasBin: true
+    dev: true
+
   /moment/2.29.1:
     resolution: {integrity: sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==}
     dev: false
@@ -2354,6 +2362,11 @@ packages:
 
   /ms/2.1.2:
     resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
+    dev: true
+
+  /mustache/4.2.0:
+    resolution: {integrity: sha512-71ippSywq5Yb7/tVYyGbkBggbU8H3u5Rz56fH60jGFgr8uHwxs+aSKeqmluIVzM0m0kB7xQjKS6qPfd0b2ZoqQ==}
+    hasBin: true
     dev: true
 
   /nanoid/3.3.2:
@@ -3820,6 +3833,16 @@ packages:
       vite: 2.8.6_less@4.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-react-use-model/0.2.0_react@17.0.2:
+    resolution: {integrity: sha512-LlCxRv0Kkhp+DcfGo2Md8eGP0HvmQsh62rVtSJ8c/1eRGU25ZkCULQwoXLB0W+yTtGBUEmM9rQ4eYvYiBahfVA==}
+    peerDependencies:
+      react: '>=16.9.0'
+    dependencies:
+      mkdirp: 1.0.4
+      mustache: 4.2.0
+      react: 17.0.2
     dev: true
 
   /vite/2.8.6_less@4.1.2:

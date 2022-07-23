@@ -5,12 +5,11 @@ import { Outlet, useRoutes } from 'react-router-dom'
 import styles from './App.module.less'
 import logo from './logo.svg'
 import Login from './pages/Login'
+import Test from './pages/Test'
+import PageA from './pages/Test/PageA'
+import PageB from './pages/Test/PageB'
 import { IS_DEV } from './utils/constant'
 console.log('【IS_DEV】', IS_DEV)
-
-const Test = () => {
-  return <div>Test</div>
-}
 
 const App: FC = () => {
   let routes: RouteObject[] = [
@@ -19,7 +18,14 @@ const App: FC = () => {
       element: <Layout />,
       children: [
         { index: true, element: <Login /> },
-        IS_DEV && { path: 'test', element: <Test /> }
+        IS_DEV && {
+          path: 'test',
+          element: <Test />,
+          children: [
+            { path: 'a', element: <PageA /> },
+            { path: 'b', element: <PageB /> }
+          ]
+        }
       ].filter(Boolean) as RouteObject[]
     }
   ]

@@ -4,6 +4,7 @@ import lessToJS from 'less-vars-to-js'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vitePluginImp from 'vite-plugin-imp'
+import viteReactModelPlugin from 'vite-plugin-react-use-model'
 
 const pathResolver = (path: string) => resolve(__dirname, path)
 const themeVariables = lessToJS(readFileSync(pathResolver('./config/theme.config.less'), 'utf8'))
@@ -34,7 +35,8 @@ export default defineConfig({
           }
         }
       ]
-    })
+    }),
+    viteReactModelPlugin()
   ],
   css: {
     preprocessorOptions: {
