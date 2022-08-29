@@ -1,11 +1,6 @@
 module.exports = {
-  extends: [
-    'alloy',
-    'alloy/react',
-    'alloy/typescript',
-    "plugin:react-hooks/recommended"
-  ],
-  plugins: ["simple-import-sort", "import"],
+  extends: ['alloy', 'alloy/react', 'alloy/typescript', 'plugin:react-hooks/recommended'],
+  plugins: ['simple-import-sort', 'import'],
   env: {
     // 你的环境变量（包含多个预定义的全局变量）
     //
@@ -22,8 +17,13 @@ module.exports = {
   },
   rules: {
     // 自定义你的规则
-      "simple-import-sort/imports": "error",
-      "simple-import-sort/exports": "error",
-      "@typescript-eslint/consistent-type-imports": "error",
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    '@typescript-eslint/consistent-type-imports': 'error'
   },
-};
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  }
+}
