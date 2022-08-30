@@ -4,15 +4,18 @@ import { Button } from 'antd'
 import { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 
+import styles from './index.module.less'
 const Test = () => {
   const navigate = useNavigate()
 
   const [a, setA] = useModel('useA')
 
   return (
-    <div style={{ border: '1px solid #ccc', height: 500 }}>
+    <div className="h-[500px] border border-solid border-gray-300">
       Test
-      <Button onClick={() => navigate('/test/a')}>page a</Button>
+      <Button onClick={() => navigate('/test/a')} className={styles.test}>
+        page a
+      </Button>
       <Button onClick={() => navigate('/test/b')}>page b</Button>
       <Button onClick={() => navigate('/test')}>test</Button>
       <div>
